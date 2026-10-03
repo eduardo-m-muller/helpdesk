@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suporte Técnico - Abrir Chamado</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>Suporte Técnico</h1>
+
+    <!-- Link para o painel do técnico -->
+    <a href="listar.html">📋 Ver lista de chamados</a>
+
+    <div class="container">
+        <h2>Abrir chamado</h2>
+
+        <!-- Mensagem de sucesso: começa escondida, o js/index.js mostra quando o chamado é salvo -->
+        <p id="mensagem-sucesso" class="mensagem-sucesso" hidden>
+            Chamado enviado com sucesso! O seu problema já foi registrado no sistema.
+        </p>
+
+        <!-- Os dados vão para o backend, que salva no banco -->
+        <form action="/backend/api/criar_chamado.php" method="POST">
+
+            <div class="nome-usuario">
+                <label for="nome">Seu Nome:</label>
+                <input type="text" id="nome" name="nome_usuario" required>
+            </div>
+
+            <div class="titulo-chamado">
+                <label for="titulo">Título do Chamado:</label>
+                <input type="text" id="titulo" name="titulo_chamado" required>
+            </div>
+
+            <div class="prioridade">
+                <label for="prioridade">Prioridade:</label>
+                <select id="prioridade" name="prioridade_chamado" required>
+                    <!-- Opção vazia: obriga a pessoa a escolher uma prioridade -->
+                    <option value="" disabled selected>Selecione a prioridade</option>
+                    <option value="alta">Alta</option>
+                    <option value="media">Média</option>
+                    <option value="baixa">Baixa</option>
+                </select>
+            </div>
+
+            <div class="descricao-chamado">
+                <label for="descricao">Descrição do Chamado:</label>
+                <textarea id="descricao" name="descricao_chamado" placeholder="Descreva o problema" required></textarea>
+            </div>
+
+            <div class="button">
+                <button type="submit">Abrir Chamado</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="js/index.js"></script>
+</body>
+</html>

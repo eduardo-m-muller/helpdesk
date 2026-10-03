@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel do Técnico - Chamados</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>Painel de Suporte - Lista de Chamados</h1>
+    <a href="index.html">➕ Abrir Novo Chamado</a>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Título</th>
+                <th>Prioridade</th>
+                <th>Descrição</th>
+                <th>Status</th>
+                <th>Data de Criação</th>
+            </tr>
+        </thead>
+        <!-- As linhas são criadas pelo js/listar.js com os dados do backend -->
+        <tbody id="lista-chamados">
+            <tr>
+                <td colspan="7" class="centralizado">Carregando chamados...</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script src="js/listar.js"></script>
+</body>
+</html>

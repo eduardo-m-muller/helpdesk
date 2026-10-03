@@ -1,0 +1,111 @@
+/* ============================================================
+   style.css
+   Estilos das duas páginas (index.html e listar.html).
+   ============================================================ */
+
+/* ---------- Geral ---------- */
+body {
+    font-family: Arial, sans-serif;
+    margin: 30px;
+    background-color: #f4f7f6;
+}
+
+a {
+    color: #007BFF;
+}
+
+/* ---------- Página do formulário (index.html) ---------- */
+.container {
+    max-width: 500px;
+    margin-top: 20px;
+    padding: 20px;
+    background: white;
+    border-radius: 6px;
+}
+
+.container label {
+    display: block;
+    margin: 12px 0 4px;
+    font-weight: bold;
+}
+
+.container input,
+.container select,
+.container textarea {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.container textarea {
+    min-height: 100px;
+}
+
+.button {
+    margin-top: 16px;
+}
+
+.button button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Mensagem verde que aparece depois de enviar o chamado */
+.mensagem-sucesso {
+    padding: 10px;
+    background-color: #e6ffcc;
+    color: #006600;
+    border-radius: 4px;
+}
+
+/* ---------- Página do painel (listar.html) ---------- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: white;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #007BFF;
+    color: white;
+}
+
+/* Linhas alternadas com cor diferente */
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.centralizado {
+    text-align: center;
+}
+
+/* Mantém as quebras de linha que a pessoa digitou na descrição */
+.descricao {
+    white-space: pre-line;
+}
+
+/* Etiqueta de prioridade */
+.badge {
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.alta  { background-color: #ffcccc; color: #cc0000; }
+.media { background-color: #ffe6cc; color: #cc6600; }
+.baixa { background-color: #e6ffcc; color: #006600; }
